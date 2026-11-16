@@ -46,5 +46,11 @@
             </intent-filter>
         </service>
 
+        <provider
+            android:name="com.tesl.accelerator.TeslFileProvider"
+            android:authorities="com.tesl.accelerator.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" />
+
     </application>
 </manifest>
