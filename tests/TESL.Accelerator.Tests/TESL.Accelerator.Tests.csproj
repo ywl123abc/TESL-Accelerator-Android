@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>TESL.Accelerator.Tests</RootNamespace>
+    <AssemblyName>TESL.Accelerator.Tests</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\TESL.Accelerator.Core\TESL.Accelerator.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\src\TESL.Accelerator.AndroidHost\Adapters\AndroidProtectedSocketProvider.cs" Link="AndroidAdapters\AndroidProtectedSocketProvider.cs" />
+    <Compile Include="..\..\src\TESL.Accelerator.AndroidHost\Adapters\AndroidTunnelManager.cs" Link="AndroidAdapters\AndroidTunnelManager.cs" />
+    <Compile Include="..\..\src\TESL.Accelerator.AndroidHost\Adapters\AndroidPlatform.cs" Link="AndroidAdapters\AndroidPlatform.cs" />
+    <Compile Include="..\..\src\TESL.Accelerator.AndroidHost\Adapters\AndroidCandidateProbe.cs" Link="AndroidAdapters\AndroidCandidateProbe.cs" />
+    <Compile Include="..\..\src\TESL.Accelerator.AndroidHost\Adapters\AndroidAcceleratorLogger.cs" Link="AndroidAdapters\AndroidAcceleratorLogger.cs" />
+    <Compile Include="..\..\src\TESL.Accelerator.AndroidHost\Logging\AppLogBuffer.cs" Link="AndroidAdapters\AppLogBuffer.cs" />
+    <Compile Include="..\..\src\TESL.Accelerator.AndroidHost\Lifecycle\AndroidVpnLifecycleManager.cs" Link="AndroidAdapters\AndroidVpnLifecycleManager.cs" />
+  </ItemGroup>
+</Project>

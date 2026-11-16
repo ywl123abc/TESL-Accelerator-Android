@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>TESL.Accelerator.AndroidEngine</RootNamespace>
+    <AssemblyName>TESL.Accelerator.AndroidEngine</AssemblyName>
+    <Version>2.0.0</Version>
+    <Description>TESL-Accelerator Android Engine Adapter, VpnService Stubs &amp; Protected Socket Contracts</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TESL.Accelerator.Core\TESL.Accelerator.Core.csproj" />
+  </ItemGroup>
+
+</Project>

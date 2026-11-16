@@ -1,0 +1,42 @@
+# .NET Build artifacts
+[Bb]in/
+[Oo]bj/
+publish/
+*.user
+*.suo
+
+# Generated and binary executables
+*.exe
+*.dll
+
+# Releases & APK binaries (distributed via GitHub Releases assets)
+Releases/
+*.apk
+*.aab
+
+# Knowledge base
+.knowledge-base/
+
+# AI Workspace Hygiene (Sandbox Policy)
+.ai/scratchpad/
+.ai/prototypes/
+.ai/patches/
+.ai/
+
+# Security and Credentials
+*.keystore
+*.jks
+*.pfx
+*.p12
+*.pem
+*.key
+*.token
+*.log
+*.tmp
+local.properties
+
+# IDE & OS cache
+.vs/
+.vscode/
+Thumbs.db
+Desktop.ini

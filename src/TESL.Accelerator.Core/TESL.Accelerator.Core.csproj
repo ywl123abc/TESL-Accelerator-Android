@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>TESL.Accelerator.Core</RootNamespace>
+    <AssemblyName>TESL.Accelerator.Core</AssemblyName>
+    <Version>2.0.0</Version>
+    <Description>TESL-Accelerator Cross-Platform Shared Business Logic and Core Abstractions</Description>
+  </PropertyGroup>
+
+</Project>

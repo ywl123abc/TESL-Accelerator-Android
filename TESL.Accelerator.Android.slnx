@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/TESL.Accelerator.AndroidEngine/TESL.Accelerator.AndroidEngine.csproj" />
+    <Project Path="src/TESL.Accelerator.AndroidHost/TESL.Accelerator.AndroidHost.csproj" />
+    <Project Path="src/TESL.Accelerator.Core/TESL.Accelerator.Core.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/TESL.Accelerator.Tests/TESL.Accelerator.Tests.csproj" />
+  </Folder>
+</Solution>

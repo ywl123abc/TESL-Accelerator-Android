@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tesl.accelerator"
+    android:versionCode="1"
+    android:versionName="2.0.0">
+
+    <!-- 基础网络与前台 VPN 权限 (Android 14/15 严格合规) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="false"
+        android:label="TESL 加速器"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:extractNativeLibs="true">
+
+        <!-- C# 原生主入口 Activity (明确指定完整类名防止 JCW 散列命名) -->
+        <activity
+            android:name="com.tesl.accelerator.MainActivity"
+            android:exported="true"
+            android:configChanges="orientation|screenSize"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 
+            C# 原生 VpnService:
+            1. 必须声明 android.permission.BIND_VPN_SERVICE 权限。
+            2. exported="true" 允许系统网络控制面板发现与绑定。
+            3. foregroundServiceType="systemExempted" 满足 Android 14+ 前台服务合规要求。
+        -->
+        <service
+            android:name="com.tesl.accelerator.TeslVpnService"
+            android:permission="android.permission.BIND_VPN_SERVICE"
+            android:foregroundServiceType="systemExempted"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+        </service>
+
+    </application>
+</manifest>

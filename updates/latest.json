@@ -1,0 +1,13 @@
+{
+  "versionName": "2.0.0",
+  "versionCode": 1,
+  "tag": "v2.0.0",
+  "publishedAt": "2026-11-16T20:30:00Z",
+  "apk": {
+    "fileName": "TESL-Accelerator-v2.0.0.apk",
+    "size": 54051934,
+    "sha256": "e7c15ea3ea638e4d1001cebae6e430566bc797118d479d1a10526d65266fb47e",
+    "downloadUrl": "https://github.com/ywl123abc/TESL-Accelerator-Android/releases/download/v2.0.0/TESL-Accelerator-v2.0.0.apk"
+  },
+  "changelog": "TESL Accelerator Android v2.0.0 正式发布：\n1. 基于 sing-box v1.11.10 内核与 ARM64 原生 cfnat 双通道优选转发引擎。\n2. 支持 443 业务通道与 8443 对战信令通道独立生命周期管理与 Protect 保护。\n3. 实现全自动低功耗常规巡检（1.3s / 60s），深度休眠无异常发热。\n4. 适配 Android 15 Edge-to-Edge 边到边安全区避让与高对比度暗黑界面。\n5. 内置 GitHub Releases 自动版本检查、内置固定加速镜像切换与用户确认安装。"
+}

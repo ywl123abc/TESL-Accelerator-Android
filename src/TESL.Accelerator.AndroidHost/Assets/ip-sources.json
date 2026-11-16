@@ -1,0 +1,86 @@
+{
+  "github_mirrors": [
+    "https://ghfast.top/https://raw.githubusercontent.com/",
+    "https://gh-proxy.com/https://raw.githubusercontent.com/",
+    "https://raw.githubusercontent.com/"
+  ],
+  "timeout_seconds": 6,
+  "max_age_hours": 48,
+  "min_required_ips": 10,
+  "max_candidates_per_channel": 128,
+  "cloudflare_official_cidr_url": "https://www.cloudflare.com/ips-v4",
+  "sources_443": [
+    {
+      "name": "Lancelot Top100",
+      "url": "https://raw.githubusercontent.com/LancelotRar/best-cf-ips/main/best-cf-ip-scanned-top100.txt",
+      "is_github": true,
+      "check_timestamp": true,
+      "port_filter": 0
+    },
+    {
+      "name": "Lancelot Top20",
+      "url": "https://raw.githubusercontent.com/LancelotRar/best-cf-ips/main/best-cf-ip-scanned-top20.txt",
+      "is_github": true,
+      "check_timestamp": true,
+      "port_filter": 0
+    },
+    {
+      "name": "IPDB",
+      "url": "https://raw.githubusercontent.com/ymyuuu/IPDB/main/BestCF/bestcfv4.txt",
+      "is_github": true,
+      "check_timestamp": false,
+      "port_filter": 0
+    },
+    {
+      "name": "Joname",
+      "url": "https://raw.githubusercontent.com/joname1/BestCFip/main/ipv4.txt",
+      "is_github": true,
+      "check_timestamp": true,
+      "port_filter": 0
+    },
+    {
+      "name": "WeTest",
+      "url": "https://bestcf.tools12345.com/wetest/ipv4.txt",
+      "is_github": false,
+      "check_timestamp": true,
+      "port_filter": 0
+    }
+  ],
+  "sources_8443": [
+    {
+      "name": "WARP-MINI-8443",
+      "url": "https://bestcf.tools12345.com/WARP/WARP-MINI-8443.txt",
+      "is_github": false,
+      "check_timestamp": false,
+      "port_filter": 8443
+    },
+    {
+      "name": "Lancelot Top100 (通用)",
+      "url": "https://raw.githubusercontent.com/LancelotRar/best-cf-ips/main/best-cf-ip-scanned-top100.txt",
+      "is_github": true,
+      "check_timestamp": true,
+      "port_filter": 0
+    },
+    {
+      "name": "IPDB",
+      "url": "https://raw.githubusercontent.com/ymyuuu/IPDB/main/BestCF/bestcfv4.txt",
+      "is_github": true,
+      "check_timestamp": false,
+      "port_filter": 0
+    },
+    {
+      "name": "Joname",
+      "url": "https://raw.githubusercontent.com/joname1/BestCFip/main/ipv4.txt",
+      "is_github": true,
+      "check_timestamp": true,
+      "port_filter": 0
+    },
+    {
+      "name": "WeTest",
+      "url": "https://bestcf.tools12345.com/wetest/ipv4.txt",
+      "is_github": false,
+      "check_timestamp": true,
+      "port_filter": 0
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-android</TargetFramework>
+    <SupportedOSPlatformVersion>26.0</SupportedOSPlatformVersion>
+    <OutputType>Exe</OutputType>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationId>com.tesl.accelerator</ApplicationId>
+    <ApplicationVersion>1</ApplicationVersion>
+    <ApplicationDisplayVersion>2.0.0</ApplicationDisplayVersion>
+    <AndroidPackageFormat>apk</AndroidPackageFormat>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <AndroidEnableFastDeployment>false</AndroidEnableFastDeployment>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RootNamespace>TESL.Accelerator.AndroidHost</RootNamespace>
+    <AssemblyName>TESL.Accelerator.AndroidHost</AssemblyName>
+    <AndroidSdkDirectory Condition="'$(AndroidSdkDirectory)' == '' and Exists('C:\Android\android-sdk')">C:\Android\android-sdk</AndroidSdkDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TESL.Accelerator.Core\TESL.Accelerator.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AndroidLibrary Include="libs\libbox.aar" />
+    <AndroidJavaSource Include="Java\LibboxPlatformAdapter.java" />
+    <AndroidNativeLibrary Include="libs\arm64-v8a\libcfnat.so">
+      <Abi>arm64-v8a</Abi>
+    </AndroidNativeLibrary>
+    <EmbeddedResource Include="Assets\**" />
+  </ItemGroup>
+</Project>
