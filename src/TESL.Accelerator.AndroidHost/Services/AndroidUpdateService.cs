@@ -472,8 +472,12 @@ namespace TESL.Accelerator.AndroidHost.Services
 
                 if (string.IsNullOrEmpty(downloadUrl)) return null;
 
-                // 提取版本号与 SHA256 (从 body 中的 SHA256: xxx 提取)
-                long versionCode = ExtractVersionCodeFromTag(tagName);
+                // 提取版本号与 SHA256 (优先从 body 中的 VersionCode: xxx / SHA256: xxx 提取)
+                long versionCode = ExtractVersionCodeFromBody(body);
+                if (versionCode <= 0)
+                {
+                    versionCode = ExtractVersionCodeFromTag(tagName);
+                }
                 string sha256 = ExtractSha256FromBody(body);
 
                 return new ReleaseInfo
@@ -540,6 +544,27 @@ namespace TESL.Accelerator.AndroidHost.Services
             {
                 return null;
             }
+        }
+
+        private static long ExtractVersionCodeFromBody(string body)
+        {
+            var lines = body.Split('\n');
+            foreach (var line in lines)
+            {
+                if (line.Contains("VersionCode", StringComparison.OrdinalIgnoreCase))
+                {
+                    int colon = line.IndexOf(':');
+                    if (colon >= 0 && colon + 1 < line.Length)
+                    {
+                        string candidate = line[(colon + 1)..].Trim().Trim('`', '*', ' ');
+                        if (long.TryParse(candidate, out long code) && code > 0)
+                        {
+                            return code;
+                        }
+                    }
+                }
+            }
+            return 0;
         }
 
         private static long ExtractVersionCodeFromTag(string tag)
